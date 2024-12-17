@@ -1,0 +1,62 @@
+/* Preloader Container */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(235, 11, 160, 0.322); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+    visibility: hidden; 
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+  }
+  
+  .preloader.show {
+    visibility: visible; 
+    opacity: 1; 
+  }
+  
+  /* Preloader Image */
+  /* .preloader img {
+    width: 200px; 
+    height: 200;
+    animation: rotate 2s linear infinite; 
+  } */
+  .plane {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .plane-img {
+    -webkit-animation: spin 2.5s linear infinite;
+    -moz-animation: spin 2.5s linear infinite;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  

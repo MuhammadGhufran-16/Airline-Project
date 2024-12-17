@@ -1,0 +1,73 @@
+/* _------------------Header-------------- */
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .header-lists {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgba(38, 41, 45, 0.9); /* Dark background for mobile menu */
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  
+    .header-lists.show {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hamburger div {
+      width: 30px;
+      height: 3px;
+      background-color: rgb(16, 4, 4);
+      margin: 5px;
+      transition: all 0.3s;
+    }
+  }
+
+/* -----------------Main css-------------- */
+/* ---Responsive Adjustments--- */
+/* @media screen and (min-device-width: 320px) and (max-device-width: 475px) {
+    .book-flight form {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1em;
+    }
+  
+    .book-flight input, .book-flight button {
+      width: auto;
+    }
+  
+    .takeoff {
+      width: 50px;
+    }
+  
+    .destination {
+      flex-basis: 22%;
+    }
+  .destinations{
+    display: flex;
+    flex-direction: column;
+  }
+    .search-flight-butt {
+      padding: 10px 40px;
+      width: auto;
+    }
+  
+    .d-flex {
+      display: flex;
+      flex-direction: column;
+    }
+  } */
+  
+  
+
+

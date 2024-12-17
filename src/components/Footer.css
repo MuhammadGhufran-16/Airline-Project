@@ -1,0 +1,78 @@
+.footer {
+    background-color: #26292d;
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+
+}
+
+.footer-section {
+    flex: 1; /* Make sections flexible */
+    min-width: 200px; /* Minimum width for sections */
+    margin: 10px; /* Space between sections */
+}
+
+.footer-section h5 {
+    margin-bottom: 10px; /* Space below headings */
+    font-size: 25px;
+}
+
+.footer-section ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.footer-section li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+.footer-section a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 19px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styling for the Laurel Icons */
+.laurel-icons {
+    display: grid;
+}
+
+.laurel-icon {
+    width: 50%; /* Set a width for the icons */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Social Icons Section */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    margin: 0 10px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #00aced; /* Hover color for all icons */
+  }
+  
+  /* Specific hover colors for individual icons */
+  .instagram:hover {
+    color: #E1306C; /* Instagram color */
+  }
+  
+  .whatsapp:hover {
+    color: #25D366; /* WhatsApp color */
+  }
+  .youtube:hover {
+    color: #FF0000; /* YouTube color */
+  }

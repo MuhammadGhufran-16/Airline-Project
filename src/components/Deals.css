@@ -1,0 +1,53 @@
+.deals-banner-image {
+  width: 100%;
+  height: 490px; /* Adjust height as needed */
+  background-image: url('../images/banner-1.jpg');
+  background-size: cover; /* Ensure the image covers the entire div */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  /* margin-top: 60px;  */
+}
+.deals-heading{
+  font-size: 50px;
+}
+.deals-texts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.deals-container {
+    display: flex; /* Use flexbox to align items */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 20px;
+    margin: 20px;
+    margin-left: 60px;
+  }
+  
+  .deal-card {
+    border: 1px solid #21262d43; /* Border style */
+    border-radius: 10px; /* Optional border radius */
+    overflow: hidden; /* Ensures child elements don't overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    margin-bottom: 20px; /* Space between rows */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, padding 0.3s ease-in-out, width 0.3s ease-in-out;
+    
+    
+  }
+  .deal-card:hover {
+  box-shadow: 1px 2px 20px 10px #33272752;
+  transform: scale(1.1) 
+  }
+  
+  .deal-image {
+    height: 160px; /* Height for the image */
+    overflow: hidden; /* Ensures the image doesn't overflow */
+  }
+  
+  .deal-image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .deal-text {
+    padding: 10px; /* Padding around the text */
+  }
+  

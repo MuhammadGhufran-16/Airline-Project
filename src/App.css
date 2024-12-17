@@ -1,0 +1,589 @@
+/* src/App.css */
+
+body {
+  font-family: 'Arsenal', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  background-color: #26292d85; /* Original background color */
+  color: white;
+  position: sticky; /* Make it sticky */
+  top: 0; /* Stick to the top */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+header.transparent {
+  background-color: rgba(255, 255, 255, 0.9); /* Lighter background when scrolled */
+}
+
+header img.logo {
+  width: 160px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+header nav ul li {
+  cursor: pointer;
+}
+
+/* --------header dropdown------ */
+select {
+  border: 1px solid #fff;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+  cursor: pointer;
+}
+
+select:focus,
+select:hover {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.329);
+}
+
+.header-logo-malay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Link styles */
+.header-lists li a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Link colors */
+.link-black {
+  color: black; /* Default color when transparent */
+}
+
+.link-white {
+  color: white; /* Color changes to white after scroll */
+}
+
+/* Active link styles */
+.header-lists li a.active {
+  color: #005099; /* Change color of active link */
+  font-weight: 700; /* Make the active link bold */
+ 
+}
+
+
+/* ----- */
+/* Custom Dropdown Styles */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.flag-icon {
+  width: 30px; /* Adjust the size of the flag icons */
+  height: auto;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 40px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.custom-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content div {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown-content div:hover {
+  background-color: #ddd;
+}
+
+
+/* ---Main start---- */
+
+/* -----------Overlay */
+/* Container for the video and overlay */
+.main-video {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Set a fixed height for the video */
+  overflow: hidden;
+}
+
+/* Video styling */
+.main-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the container without distorting */
+}
+
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  color: white; /* Text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Text styles */
+.overlay h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.overlay p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+/* ----------Overlay End */
+.main-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.book-flight {
+  padding: 2em;
+  text-align: center;
+  /* max-width: 1000px; */
+}
+
+.book-flight h2 {
+  font-size: 40px;
+}
+
+.book-flight form {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap; /* Allow wrapping */
+}
+.book-flight form label{
+font-size: 25px;
+display: flex;
+align-items: center;
+}
+
+.book-flight input, .book-flight button {
+  padding: 0.5em;
+  font-size: 15px;
+}
+
+.book-flight button {
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---calender--- */
+.custom-date-input {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-date-input input[type="date"] {
+  padding-right: 40px; /* Add space for the calendar icon */
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer; /* Ensures the date input is clickable */
+}
+
+.custom-date-input input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0; /* Hide the default calendar icon */
+}
+
+.custom-date-input::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url('./images/calendar.svg') no-repeat center center;
+  background-size: contain;
+  pointer-events: none; /* The icon itself doesn't interfere with the input */
+}
+
+
+.book-flight button:hover {
+  background-color: #06478a;
+}
+.takeoff{
+  width: 50px;
+}
+.travel-inspiration {
+  text-align: center;
+  margin-top: 2em;
+}
+.travel-inspiration h2 {
+ font-size: 40px;
+ color: rgb(0, 0, 0);
+}
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1em;
+  padding: 30px;
+  background-image: url('./images/backgroundimg.jpg'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+}
+
+.flights-to {
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px 0px 20px 0px;
+  font-size: 20px;
+}
+
+.travel-inspiration {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.destination {
+  border-width: 70px;
+  border-style: solid;
+  border-image-source: url(/src/images/destination-window.svg);
+  border-image-slice: 61;
+  border-radius: 80px;
+  padding: 30px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition: background 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.destimala {
+  background-image: url('./images/twin-tower.jpg'); /* Path to your background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 224px;
+}
+
+.destiusa {
+  background-image: url(/src/images/Usa.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 224px;
+  position: relative;
+}
+
+.destisinga {
+  background-image: url('./images/Singapore.jpg'); /* Path to your background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 224px;
+}
+
+.destiparis {
+  background-image: url('./images/Paris.jpg'); /* Path to your background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 224px;
+}
+
+/* Hover effect on the destination */
+.destination:hover {
+  background: rgb(215 197 199 / 21%);
+  background-position: bottom; /* Move to bottom on hover */
+  transition: background 0.8s ease-in-out;
+}
+
+.hidden {
+  display: none;
+  font-size: 18px;
+  color: white;
+}
+
+.destination:hover .hello {
+  display: block;
+}
+
+/* ----- Button---- */
+
+.search-flight-butt {
+      background-image: radial-gradient(100% 100% at 100% 0, #6a00f5 0, #9c07d9 100%);
+      border-radius: 6px;
+      box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+      color: #fff;
+      cursor: pointer;
+      font-family: 'Arsenal', sans-serif;
+      letter-spacing: 2px;
+      padding: 10px;
+}
+
+.search-flight-butt:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.search-flight-butt:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.search-flight-butt:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+/* -Booking Information ---- */
+
+.flight-booking-info {
+  display: grid;
+  justify-content: center;
+  margin-top: 2em;
+  margin: 20px 60px 20px 60px;
+  padding: 2em 0;
+  background-color: #f8f9fa; /* Light background for distinction */
+}
+
+.info-box {
+  background-color: white; /* White background for the box */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2em; /* Inner padding for content */
+  box-shadow: 0 4px 15px rgb(0 0 0 / 31%);
+  max-width: 1250px;
+}
+.info-box:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.flight-booking-info h2, h5 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+.flight-booking-info h2{
+font-size: 40px;
+}
+.text-center{
+  font-size: 30px;
+}
+.flight-booking-info p {
+  text-align: center;
+  line-height: 1.6;
+  color: #333; /* Darker text color for better readability */
+}
+.info-box p {
+font-size: 20px;
+}
+.info-box h5 {
+  font-size: 25px;
+  }
+
+/* ------------Enrish experi */
+.info-icon {
+  width: 50px; /* Set a desired width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 1em; /* Space between the image and the heading */
+  display: block; /* Center the icon if necessary */
+}
+
+.enrich-experience {
+  margin: 10px 90px;
+  padding: 2em 0;
+}
+.enrich-experience h2{
+  font-size: 50px;
+  text-align: center;
+}
+.enrich-experience.info-box {
+ background-color: #c65454;
+}
+.enrich-experience{
+ background-image: url('Swirl_Page-background.svg');
+}
+
+.d-flex {
+  display: flex; 
+  gap: 25px; 
+   
+}
+
+.enrich-experience-info-box {
+  background-color: white; /* White background for the box */
+  border-radius: 10px; /* Rounded corners */
+  padding: 1.5em; /* Inner padding for content */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  flex: 1 1 calc(25% - 25px); /* Responsive width with gap */
+  min-width: 200px; /* Minimum width to maintain usability */
+  
+  display: grid;
+  justify-items: center;
+  
+  /* Add smooth transition for the transform and box-shadow effects */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, padding 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.enrich-experience-info-box:hover {
+  width: 15%; /* Slightly increase width for zoom effect */
+  padding: 25px;
+  box-shadow: 3px 4px 11px 2px #005099b0; /* New shadow effect */
+  border-radius: 20px 20px 0px 20px; /* Adjusted border-radius */
+  
+  transform: scale(1.1); /* Zoom in effect */
+}
+
+.enrich-experience-info-box h3{
+  font-size: 25px;
+}
+.info-box img{
+  width: 100px;
+}
+.info-box h3{
+  color: rgb(0, 74, 111);
+}
+
+
+.enrich-experience h5 {
+  margin-bottom: 0.5em; /* Space between heading and paragraph */
+}
+
+.enrich-experience p {
+  font-size: 0.9em; /* Smaller font size for descriptions */
+  color: #333; /* Darker text color for better readability */
+}
+
+
+
+
+
+.hidden {
+  display: none; /* Initially hide the <p> element */
+}
+
+.destination:hover .hello {
+  display: block; /* Show <p> on hover */
+}
+
+.butt {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.signin-signup {
+  align-items: center;
+  font-family: 'Arsenal', sans-serif;
+  background-image: radial-gradient(100% 100% at 100% 0, #6a00f5 0, #9c07d9 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+
+
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.signin-signup:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.signin-signup:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.signin-signup:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #0d47a1;
+  color: white;
+  width: 100%; /* Ensure full width */
+  position: relative; /* Change position to relative */
+ /* Add margin to separate from content */
+}
