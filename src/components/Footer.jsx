@@ -11,8 +11,8 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-section laurel-icons">
-                <img src={laurel1} alt="Laurel 1" className="laurel-icon" /> <br/>
-                <img src={laurel2} alt="Laurel 2" className="laurel-icon" /><br/>
+                <img src={laurel1} alt="Laurel 1" className="laurel-icon" /> 
+                <img src={laurel2} alt="Laurel 2" className="laurel-icon" />
                 <img src={laurel3} alt="Laurel 3" className="laurel-icon" />
             </div>
             <div className="footer-section">
