@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <header className={`header ${isTransparent ? 'transparent' : ''}`}>
-      <Link to="/" className="header-logo-malay">
+      <Link to="/Airline-Project" className="header-logo-malay">
         {/* Conditionally set logo image based on scroll */}
         <img
           src={isTransparent ? logo : logoWhite}
