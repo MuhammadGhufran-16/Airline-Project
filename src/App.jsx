@@ -18,7 +18,7 @@ function App() {
       <Preloader />
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/Airline-Project" element={<Main />} />
           <Route path="/deals" element={<Deals />} />
           <Route path="/flight-details" element={<FlightDetails />} />
           <Route path="/gallery" element={<Gallery />} />
